@@ -17,9 +17,3 @@ fi
 chown -R app:app /home/app/source
 cd /home/app/source/narra
 sudo -u app bundle install
-
-# Check for debug
-if [[ "$DEBUG" == "true" ]]; then
-  touch /etc/service/nginx/down
-  /usr/sbin/service nginx stop
-fi
